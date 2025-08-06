@@ -1,0 +1,46 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "pageMerge": "git checkout gh-pages && git merge main --no-edit",
+    "addDist": "git add dist -f && git commit -m 'Deployment commit'",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "lint": "eslint . --ext .js,.mjs",
+    "lint:fix": "eslint . --ext .js,.mjs --fix",
+    "format": "prettier . --check",
+    "format:write": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chacka1315/template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chacka1315/template/issues"
+  },
+  "homepage": "https://github.com/chacka1315/template#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "prettier": "3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  }
+}
