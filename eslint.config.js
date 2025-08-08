@@ -1,6 +1,6 @@
-import { defineConfig } from 'eslint/config'
-import js from '@eslint/js'
-import eslintConfigPrettier from 'eslint-config-prettier/flat'
+import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 export default defineConfig([
   {
@@ -14,6 +14,11 @@ export default defineConfig([
       'no-undef': 'warn',
       'no-var': 'error',
     },
+    globals: {
+      document: 'readonly',
+      window: 'readonly',
+      console: 'readonly',
+    },
   },
   eslintConfigPrettier,
-])
+]);

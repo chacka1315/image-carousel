@@ -1,0 +1,75 @@
+#carousel-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+#slides-container {
+  /* align-items: center; */
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#nextBtn,
+#previousBtn {
+  width: 100px;
+  height: 400px;
+}
+
+#slides {
+  width: 2600px;
+  height: 400px;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slides-item {
+  width: 400px;
+  height: 400px;
+}
+
+#carousel-nav-dots {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+#carousel-nav-dots span {
+  width: 15px;
+  height: 15px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#carousel-nav-dots span:hover {
+  border: 2px solid rgb(255, 165, 0, 30%);
+}
+
+#carousel-nav-dots span:active {
+  transform: scale(0.9);
+}
+.fillDot {
+  background-color: orange;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#carousel-image button {
+  background-color: white;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
+
+#carousel-image button:hover {
+  background-color: rgb(255, 165, 0, 10%);
+}
